@@ -24,4 +24,4 @@ If the cluster is running YARN, you can replace "--master local" with "--master 
 If the cluster is running a Spark standalone cluster manager, you can replace "--master local" with "--master spark://<master host>:<master port>".
 ```./bin/spark-submit --class com.cloudera.wordcount.WordCount --master spark://quickstart.cloudera:7077 --num-executors 1 --driver-memory 1g --executor-memory 1g --executor-cores 1 --queue default /home/cloudera/Downloads/sparkwordcount-0.0.1-SNAPSHOT.jar hdfs://quickstart.cloudera:8020/user/cloudera/input.txt 2```
 
-Refer to Refer to http://spark.apache.org/docs/latest/running-on-yarn.html for more details on running a Spark application on yarn cluster.
+Refer to http://spark.apache.org/docs/latest/running-on-yarn.html for more details on running a Spark application on yarn cluster.
