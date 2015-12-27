@@ -18,6 +18,7 @@ This will run the application in a single local process.
 
 If the cluster is running YARN, you can replace "--master local" with "--master yarn-client" or "--master yarn-cluster".
 ```./bin/spark-submit --class com.cloudera.wordcount.WordCount --master yarn-client --num-executors 1 --driver-memory 1g --executor-memory 1g --executor-cores 1 --queue default /home/cloudera/Downloads/sparkwordcount-0.0.1-SNAPSHOT.jar hdfs://quickstart.cloudera:8020/user/cloudera/input.txt 2```
+
 ```./bin/spark-submit --class com.cloudera.wordcount.WordCount --master yarn-cluster --num-executors 1 --driver-memory 1g --executor-memory 1g --executor-cores 1 --queue default /home/cloudera/Downloads/sparkwordcount-0.0.1-SNAPSHOT.jar hdfs://quickstart.cloudera:8020/user/cloudera/input.txt 2```
 
 If the cluster is running a Spark standalone cluster manager, you can replace "--master local" with "--master spark://<master host>:<master port>".
