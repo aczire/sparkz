@@ -1,26 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Copyright (c) 2014, Cloudera, Inc. All Rights Reserved.
-
-  Cloudera, Inc. licenses this file to you under the Apache License,
-  Version 2.0 (the "License"). You may not use this file except in
-  compliance with the License. You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-  This software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-  CONDITIONS OF ANY KIND, either express or implied. See the License for
-  the specific language governing permissions and limitations under the
-  License.
-  -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.sparkz</groupId>
-  <artifactId>streamcount</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
-  <name>Sparkz Streaming Word Count</name>
-  
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.sparkz</groupId>
+	<artifactId>sparkzBuilder</artifactId>
+	<packaging>pom</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Sparkz Builder Project</name>
+
+	<prerequisites>
+		<maven>2.2.1</maven>
+	</prerequisites>
+
+	<modules>
+		<module>./sparkz-common</module>
+		<module>./wordcount</module>
+	</modules>
+
   <repositories>
     <repository>
       <id>scala-tools.org</id>
@@ -44,6 +38,14 @@
     </repository>
   </repositories>
 
+	<properties>
+		<project.build.sourceEncoding>
+			UTF-8
+		</project.build.sourceEncoding>
+		<copyright.year>2015</copyright.year>
+		<sparkz.version>0.1.0</sparkz.version>
+	</properties>	
+
   <pluginRepositories>
     <pluginRepository>
       <id>scala-tools.org</id>
@@ -51,11 +53,6 @@
       <url>http://scala-tools.org/repo-releases</url>
     </pluginRepository>
   </pluginRepositories>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-  </properties>
 
   <build>
     <plugins>
@@ -69,8 +66,8 @@
       </plugin>
     </plugins>  
   </build>
-
-  <dependencies>
+  
+    <dependencies>
     <dependency>
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-library</artifactId>
@@ -81,10 +78,5 @@
       <artifactId>spark-core_2.10</artifactId>
       <version>1.5.0-cdh5.5.0</version>
     </dependency>
-    <dependency>
-      <groupId>com.sparkz</groupId>
-      <artifactId>sparkzcommon</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
-    </dependency>	
   </dependencies>
 </project>
